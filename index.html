@@ -1211,25 +1211,25 @@ footer{
       </p>
     </div>
 
-    <div class="contact-form" role="form" aria-label="Contact form">
+    <form class="contact-form" action="https://formspree.io/f/mlgvnkpb" method="POST" id="contact-form">
       <h3 style="color:#fff;font-size:18px;font-weight:700;margin-bottom:24px">Book your free discovery call</h3>
       <div class="form-row">
         <div class="form-group">
           <label class="form-label" for="name">Your name</label>
-          <input class="form-input" type="text" id="name" name="name" placeholder="Rahul Sharma" autocomplete="name">
+          <input class="form-input" type="text" id="name" name="name" placeholder="Rahul Sharma" autocomplete="name" required>
         </div>
         <div class="form-group">
           <label class="form-label" for="phone">WhatsApp number</label>
-          <input class="form-input" type="tel" id="phone" name="phone" placeholder="+91 98765 43210" autocomplete="tel">
+          <input class="form-input" type="tel" id="phone" name="phone" placeholder="+91 98765 43210" autocomplete="tel" required>
         </div>
       </div>
       <div class="form-group">
         <label class="form-label" for="business">Your business name and location</label>
-        <input class="form-input" type="text" id="business" name="business" placeholder="Valley Tales — Rishikesh">
+        <input class="form-input" type="text" id="business" name="business" placeholder="Valley Tales — Rishikesh" required>
       </div>
       <div class="form-group">
         <label class="form-label" for="type">Business type</label>
-        <select class="form-select" id="type" name="type">
+        <select class="form-select" id="type" name="type" required>
           <option value="">Select your business type</option>
           <option>Adventure sports operator</option>
           <option>Trekking company</option>
@@ -1244,14 +1244,20 @@ footer{
         <label class="form-label" for="goal">What's your biggest marketing challenge right now?</label>
         <textarea class="form-textarea" id="goal" name="goal" placeholder="e.g. I'm not getting enough direct bookings, my Instagram isn't growing, I can't be found on Google..."></textarea>
       </div>
-      <button type="button" class="btn btn-lime" style="width:100%;justify-content:center;font-size:16px;padding:16px" onclick="this.textContent='Message sent! I will reach out within 24 hours.'">
+      <input type="hidden" name="_subject" value="New discovery call request — The Strategic Traveller">
+      <input type="hidden" name="_next" value="https://thestrategictraveller.in/thank-you">
+      <button type="submit" class="btn btn-lime" style="width:100%;justify-content:center;font-size:16px;padding:16px" id="submit-btn">
         Book my free call
         <i class="ti ti-arrow-right" aria-hidden="true"></i>
       </button>
       <p style="text-align:center;font-size:12px;color:rgba(255,255,255,0.3);margin-top:14px">
         No spam. No pressure. I reply within 24 hours.
       </p>
-    </div>
+      <div id="form-success" style="display:none;text-align:center;padding:16px;background:rgba(200,241,53,0.1);border:1px solid rgba(200,241,53,0.3);border-radius:12px;margin-top:16px">
+        <p style="color:var(--lime);font-weight:700;font-size:15px">✓ Message sent!</p>
+        <p style="color:rgba(255,255,255,0.5);font-size:13px;margin-top:4px">I'll reach out within 24 hours.</p>
+      </div>
+    </form>
   </div>
 </section>
 </main>
@@ -1326,7 +1332,33 @@ footer{
 </button>
 
 <script>
-const words = ["thrill.","adventure.","business.","niche.","brand.","story."];
+const form = document.getElementById('contact-form');
+if(form){
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    const btn = document.getElementById('submit-btn');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    try {
+      const res = await fetch('https://formspree.io/f/mlgvnkpb', {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if(res.ok){
+        form.reset();
+        document.getElementById('form-success').style.display = 'block';
+        btn.style.display = 'none';
+      } else {
+        btn.textContent = 'Something went wrong — try again';
+        btn.disabled = false;
+      }
+    } catch(err){
+      btn.textContent = 'Something went wrong — try again';
+      btn.disabled = false;
+    }
+  });
+}
 let wi = 0;
 const wr = document.getElementById("word-rotate");
 if(wr){

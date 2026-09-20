@@ -279,22 +279,46 @@ footer{background:#080808;padding:52px 0 28px;color:rgba(255,255,255,0.4)}
 #back-top.visible{opacity:1;pointer-events:all}
 
 @media(max-width:1024px){
-  .hero-grid,.mtm-grid,.services-split{grid-template-columns:1fr 1fr}
+  .mtm-grid,.services-split{grid-template-columns:1fr 1fr}
   .hero-form-card{display:none}
+  .hero-grid{grid-template-columns:1fr}
   .dest-grid,.blog-grid{grid-template-columns:1fr 1fr}
   .footer-grid{grid-template-columns:1fr 1fr}
-  .hiw-grid{grid-template-columns:1fr 1fr}.hiw-grid::before{display:none}
+  .hiw-grid{grid-template-columns:1fr 1fr;row-gap:32px}
+  .hiw-step{padding-top:16px}
+  .hiw-grid::before{display:none}
   .stats-grid{grid-template-columns:1fr 1fr}
   .stat-item{border-right:none;border-bottom:1px solid var(--border)}
 }
 @media(max-width:768px){
   .container{padding:0 20px}.section{padding:64px 0}
+  #nav{padding:0 20px}
+  .mobile-menu{padding:20px 20px 28px}
+  .nav-mobile-toggle{display:flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;padding:0}
   .dest-grid,.blog-grid,.footer-grid,.stats-grid{grid-template-columns:1fr}
+  .footer-grid{gap:32px}
   .hiw-grid{grid-template-columns:1fr 1fr}
   .ff-grid,.hfc-grid{grid-template-columns:1fr}
-  .corp-inner{flex-direction:column}
+  .ff-input,.ff-select,.ff-textarea{font-size:16px}
+  .corp-inner{flex-direction:column;padding:28px 24px}
+  .corp-btns{margin-top:4px}
+  .corp-btns .btn{width:100%;justify-content:center}
   .nav-links,.nav-cta{display:none}
-  .nav-mobile-toggle{display:block}
+  #hero{padding-top:120px}
+  #cta{padding:64px 0}
+  .full-form{padding:24px 20px}
+  footer{padding:40px 0 24px}
+  .soc-btn{width:40px;height:40px}
+  details summary i{flex-shrink:0}
+}
+@media(max-width:480px){
+  .hero-h1{letter-spacing:-1.5px;line-height:1.04}
+  .hero-proof{gap:14px 18px}
+  .services-split{grid-template-columns:1fr}
+  .mtm-grid{grid-template-columns:1fr;gap:36px}
+  .hiw-grid{grid-template-columns:1fr;row-gap:28px}
+  .corp-title{font-size:20px}
+  .full-form{padding:20px 16px}
 }
 </style>
 </head>

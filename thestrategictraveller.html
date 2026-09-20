@@ -192,6 +192,7 @@ button{cursor:pointer;font-family:inherit;border:none;background:none}
 }
 .nav-cta:hover{opacity:0.88}
 .nav-mobile-toggle{display:none;color:#fff;font-size:22px}
+.nav-mobile-actions{display:contents}
 
 /* ─── HERO ─── */
 #hero{
@@ -500,6 +501,12 @@ button{cursor:pointer;font-family:inherit;border:none;background:none}
 .blog-read{font-size:12px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:4px}
 .blog-card.featured .blog-thumb{aspect-ratio:auto;min-height:200px}
 
+/* ─── FAQ ─── */
+.faq-summary{
+  font-size:16px;font-weight:700;cursor:pointer;list-style:none;
+  display:flex;justify-content:space-between;align-items:center;gap:12px;
+}
+
 /* ─── CTA ─── */
 #cta{
   background:var(--ink);
@@ -629,14 +636,63 @@ footer{
 @media(max-width:768px){
   .container{padding:0 20px}
   .section{padding:64px 0}
+  .section-sm{padding:48px 0}
+  #cta{padding:64px 0}
   .services-grid,.grid-3,.products-grid,.process-steps,.aud-grid,.blog-grid{grid-template-columns:1fr}
   .process-steps::before{display:none}
   .svc-large{grid-column:1}
-  .nav-links,.nav-cta{display:none}
-  .nav-mobile-toggle{display:block}
+
+  /* mobile nav: hamburger opens a dropdown panel; CTA stays visible in the bar */
+  #nav{padding:0 20px}
+  .nav-mobile-actions{display:flex;align-items:center;gap:10px}
+  .nav-links{
+    display:none;
+    position:fixed;top:68px;left:0;right:0;
+    flex-direction:column;align-items:stretch;gap:0;
+    background:rgba(13,13,13,0.98);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(255,255,255,0.08);
+    padding:8px 20px 16px;
+    max-height:calc(100vh - 68px);
+    overflow-y:auto;
+  }
+  #nav.nav-open .nav-links{display:flex}
+  .nav-links a{
+    display:block;width:100%;
+    padding:14px 4px;
+    font-size:16px;
+    color:rgba(255,255,255,0.85);
+    border-bottom:1px solid rgba(255,255,255,0.06);
+  }
+  .nav-cta{display:inline-flex;padding:9px 18px;font-size:12px}
+  .nav-mobile-toggle{display:block;padding:9px}
+
   .form-row{grid-template-columns:1fr}
+  .form-input,.form-select,.form-textarea{font-size:16px}
+  .contact-form{padding:24px 20px}
   .footer-grid{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;align-items:flex-start;gap:14px}
+  .footer-bottom-links{flex-wrap:wrap;gap:12px 20px}
+  .social-btn{width:40px;height:40px}
   .hero-stats{flex-wrap:wrap;gap:24px}
+  .hero-headline{font-size:clamp(38px,11vw,58px);letter-spacing:-1.5px}
+  .faq-summary{align-items:flex-start}
+  .faq-summary i{margin-top:3px;flex-shrink:0}
+}
+@media(max-width:480px){
+  .container{padding:0 16px}
+  .section{padding:48px 0}
+  .section-sm{padding:40px 0}
+  #cta{padding:56px 0}
+  .hero-headline{font-size:clamp(32px,12vw,44px);letter-spacing:-1px}
+  .hero-sub{font-size:15px}
+  .hero-stats{gap:16px 22px}
+  .hero-stat-num{font-size:30px}
+  .t-h2{font-size:clamp(28px,8vw,36px)}
+  .contact-form{padding:20px 16px}
+  .problem-card{padding:18px 16px;gap:12px}
+  .svc{padding:22px 20px}
+  .aud-card{padding:22px 18px}
 }
 @media(prefers-reduced-motion:reduce){
   .marquee-inner{animation:none}
@@ -659,8 +715,10 @@ footer{
     <li><a href="#blog">Resources</a></li>
     <li><a href="#cta">Contact</a></li>
   </ul>
-  <a href="#cta" class="nav-cta">Book a free call</a>
-  <button class="nav-mobile-toggle" aria-label="Open menu"><i class="ti ti-menu-2"></i></button>
+  <div class="nav-mobile-actions">
+    <a href="#cta" class="nav-cta">Book a free call</a>
+    <button class="nav-mobile-toggle" aria-label="Open menu" aria-expanded="false"><i class="ti ti-menu-2"></i></button>
+  </div>
 </nav>
 </header>
 
@@ -1168,7 +1226,7 @@ footer{
     </h2>
     <div role="list">
       <details class="faq-item" role="listitem" style="border-bottom:1px solid var(--border);padding:20px 0">
-        <summary style="font-size:16px;font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center">
+        <summary class="faq-summary">
           What is adventure tourism marketing?
           <i class="ti ti-chevron-down" aria-hidden="true" style="font-size:18px;color:var(--muted)"></i>
         </summary>
@@ -1177,7 +1235,7 @@ footer{
         </p>
       </details>
       <details class="faq-item" role="listitem" style="border-bottom:1px solid var(--border);padding:20px 0">
-        <summary style="font-size:16px;font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center">
+        <summary class="faq-summary">
           How can a travel operator get more bookings through social media?
           <i class="ti ti-chevron-down" aria-hidden="true" style="font-size:18px;color:var(--muted)"></i>
         </summary>
@@ -1186,7 +1244,7 @@ footer{
         </p>
       </details>
       <details class="faq-item" role="listitem" style="border-bottom:1px solid var(--border);padding:20px 0">
-        <summary style="font-size:16px;font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center">
+        <summary class="faq-summary">
           How do I rank my adventure sports business on Google?
           <i class="ti ti-chevron-down" aria-hidden="true" style="font-size:18px;color:var(--muted)"></i>
         </summary>
@@ -1195,7 +1253,7 @@ footer{
         </p>
       </details>
       <details class="faq-item" role="listitem" style="padding:20px 0">
-        <summary style="font-size:16px;font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center">
+        <summary class="faq-summary">
           What is AEO and why does my travel business need it?
           <i class="ti ti-chevron-down" aria-hidden="true" style="font-size:18px;color:var(--muted)"></i>
         </summary>
@@ -1354,6 +1412,34 @@ if(wr){
       wr.style.transform="translateY(0)";
     },300);
   },2200);
+}
+
+const navEl = document.getElementById("nav");
+const navToggle = document.querySelector(".nav-mobile-toggle");
+if(navEl && navToggle){
+  const closeNav = () => {
+    navEl.classList.remove("nav-open");
+    navToggle.setAttribute("aria-expanded","false");
+    navToggle.setAttribute("aria-label","Open menu");
+    const icon = navToggle.querySelector("i");
+    if(icon){ icon.classList.add("ti-menu-2"); icon.classList.remove("ti-x"); }
+  };
+  navToggle.addEventListener("click", () => {
+    const isOpen = navEl.classList.toggle("nav-open");
+    navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    navToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+    const icon = navToggle.querySelector("i");
+    if(icon){
+      icon.classList.toggle("ti-menu-2", !isOpen);
+      icon.classList.toggle("ti-x", isOpen);
+    }
+  });
+  document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", closeNav);
+  });
+  window.addEventListener("resize", () => {
+    if(window.innerWidth > 768) closeNav();
+  });
 }
 
 const bt = document.getElementById("back-top");

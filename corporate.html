@@ -224,6 +224,13 @@ button{cursor:pointer;font-family:inherit;border:none;background:none}
 #corp-success{display:none;text-align:center;padding:16px;background:rgba(200,241,53,0.1);border:1px solid rgba(200,241,53,0.3);border-radius:12px;margin-top:16px}
 
 /* FAQ */
+.med-band{padding:40px 0}
+.med-band-inner{display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap;border-radius:28px;padding:32px 36px;background:#0F1A14;color:#fff}
+.med-band-tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#C8F135;margin-bottom:8px}
+.med-band-title{font-size:clamp(20px,2.4vw,26px);font-weight:800;letter-spacing:-0.5px;line-height:1.2;margin-bottom:8px}
+.med-band-sub{font-size:14px;color:rgba(255,255,255,0.55);line-height:1.65;max-width:620px}
+.med-band .btn{background:#C8F135;color:#0F1A14;flex-shrink:0}
+@media(max-width:768px){.med-band-inner{padding:26px 22px}.med-band .btn{width:100%;justify-content:center}}
 #faq{background:var(--white)}
 details{border-bottom:1px solid var(--border);padding:18px 0}
 details summary{font-size:15px;font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
@@ -295,6 +302,7 @@ footer{background:#080808;padding:40px 0 28px;color:rgba(255,255,255,0.45)}
 <nav id="nav">
   <a href="/" class="nav-logo">the strategic <span>traveller</span></a>
   <ul class="nav-links">
+    <li><a href="medical.html">Medical tourism</a></li>
     <li><a href="wellness.html">Wellness retreats</a></li>
     <li><a href="/corporate" class="active">Corporate retreats</a></li>
     <li><a href="/#blog">Resources</a></li>
@@ -305,6 +313,7 @@ footer{background:#080808;padding:40px 0 28px;color:rgba(255,255,255,0.45)}
 </nav>
 <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
   <a href="/" onclick="closeMob()">Home</a>
+  <a href="medical.html" onclick="closeMob()">Medical tourism</a>
   <a href="/#services" onclick="closeMob()">Services</a>
   <a href="/corporate" onclick="closeMob()">Corporate retreats</a>
   <a href="/#blog" onclick="closeMob()">Resources</a>
@@ -593,6 +602,7 @@ footer{background:#080808;padding:40px 0 28px;color:rgba(255,255,255,0.45)}
               <option>Annual company getaway</option>
               <option>Sales incentive trip</option>
               <option>CSR and sustainability</option>
+              <option>Executive health check-ups</option>
               <option>Not sure help me decide</option>
             </select>
           </div>
@@ -633,6 +643,18 @@ footer{background:#080808;padding:40px 0 28px;color:rgba(255,255,255,0.45)}
 </section>
 
 <!-- FAQ -->
+<div class="med-band" style="background:var(--white);padding-top:72px">
+  <div class="container">
+    <div class="med-band-inner">
+      <div>
+        <div class="med-band-tag">Executive health</div>
+        <div class="med-band-title">Add health check-ups for your leadership team</div>
+        <div class="med-band-sub">Combine your offsite with comprehensive executive health screening at NABH or JCI-accredited hospitals in Delhi NCR, Bengaluru, or Mumbai. Our Delhi team schedules the appointments, transport, and report reviews, usually within one or two days.</div>
+      </div>
+      <a href="medical.html#treatments" class="btn">See medical services <i class="ti ti-arrow-right"></i></a>
+    </div>
+  </div>
+</div>
 <section id="faq" class="section">
   <div class="container" style="max-width:720px">
     <h2 style="font-size:clamp(24px,3vw,36px);font-weight:800;letter-spacing:-0.8px;text-align:center;margin-bottom:40px">Common questions</h2>

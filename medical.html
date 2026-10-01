@@ -13,7 +13,7 @@
 <meta property="og:description" content="End-to-end medical tourism coordination in India. Hospital selection, visa, appointments, accommodation and recovery. Serving patients from the GCC, UK, Europe, USA, Africa, Australia and New Zealand.">
 <meta property="og:url" content="https://thestrategictraveller.com/medical">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalBusiness","name":"The Strategic Traveller Medical Tourism","description":"End-to-end medical tourism coordination for international patients travelling to India for treatment.","url":"https://thestrategictraveller.com/medical","areaServed":"India","serviceType":["Medical Tourism Coordination","International Patient Services","Hospital Selection","e-Medical Visa Support"]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much does medical treatment in India cost compared to other countries?","acceptedAnswer":{"@type":"Answer","text":"Medical treatment in India is typically 60 to 80 percent less expensive than equivalent procedures in the USA, UK, or Australia. Cardiac bypass surgery costs approximately USD 5,000 to 7,000 in India compared to USD 70,000 to 150,000 in the USA. Hip replacement in India costs USD 6,000 to 8,000 versus USD 40,000 to 50,000 in the USA. These savings substantially exceed travel and accommodation costs for international patients."}},{"@type":"Question","name":"How do I apply for an e-Medical Visa for India?","acceptedAnswer":{"@type":"Answer","text":"The e-Medical Visa is available to citizens of 167 countries and is applied for online at the Indian Visa Online portal. You need a hospital appointment confirmation letter, passport-size photo, and passport details. Processing typically takes 1 to 4 business days. An e-Medical Attendant Visa is available for one accompanying family member. The Strategic Traveller manages the full visa documentation process for all patients we coordinate."}},{"@type":"Question","name":"Which hospitals in India are best for international patients?","acceptedAnswer":{"@type":"Answer","text":"The best hospitals in India for international patients are those with NABH or JCI accreditation. Leading options include Manipal Hospitals (multi-city, cardiac, orthopaedic, oncology), Max Healthcare (Delhi NCR, cardiac, oncology, neuro), Apollo Hospitals (pan-India, widest international network), and Narayana Health (cardiac, Bengaluru). The right hospital depends on your specific treatment, the specialty required, and your preferred city."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much does medical treatment in India cost compared to other countries?", "acceptedAnswer": {"@type": "Answer", "text": "Medical treatment in India is typically 60 to 80 percent less expensive than equivalent procedures in the USA, UK, or Australia. Cardiac bypass surgery costs approximately USD 5,000 to 7,000 in India compared to USD 70,000 to 150,000 in the USA. Hip replacement in India costs USD 6,000 to 8,000 versus USD 40,000 to 50,000 in the USA. These savings substantially exceed travel and accommodation costs for international patients."}}, {"@type": "Question", "name": "How do I apply for an e-Medical Visa for India?", "acceptedAnswer": {"@type": "Answer", "text": "The e-Medical Visa is available to citizens of 167 countries and is applied for online at the Indian Visa Online portal. You need a hospital appointment confirmation letter, passport-size photo, and passport details. Processing typically takes 1 to 4 business days. An e-Medical Attendant Visa is available for one accompanying family member. The Strategic Traveller manages the full visa documentation process for all patients we coordinate."}}, {"@type": "Question", "name": "Which hospitals in India are best for international patients?", "acceptedAnswer": {"@type": "Answer", "text": "The best hospitals in India for international patients are those with NABH or JCI accreditation. Leading options include Manipal Hospitals (multi-city, cardiac, orthopaedic, oncology), Max Healthcare (Delhi NCR, cardiac, oncology, neuro), Apollo Hospitals (pan-India, widest international network), and Narayana Health (cardiac, Bengaluru). The right hospital depends on your specific treatment, the specialty required, and your preferred city."}}, {"@type": "Question", "name": "Is it safe to have surgery in India?", "acceptedAnswer": {"@type": "Answer", "text": "At accredited hospitals, yes. We only refer patients to NABH or JCI-accredited hospitals, which follow audited standards for infection control, patient safety, and clinical governance. Specialists review your reports before you travel, so you know the treatment plan and surgeon before you book a flight."}}, {"@type": "Question", "name": "How long will I need to stay in India for treatment?", "acceptedAnswer": {"@type": "Answer", "text": "Typical stays are 2 to 3 weeks for hip or knee replacement, 3 to 4 weeks for cardiac bypass, 5 to 10 days for dental implants, and 2 to 3 weeks for an IVF cycle. Your treating doctor confirms the recommended stay, including time before you are fit to fly."}}, {"@type": "Question", "name": "Can patients from New Zealand get treatment in India?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Our New Zealand-based lead helps patients in New Zealand gather reports, apply for the e-Medical Visa, and prepare for travel, and checks in after they return home. Our Delhi team manages hospital appointments, accommodation, transfers, and in-hospital support in India."}}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -129,6 +129,41 @@ footer{background:#080808;padding:48px 0 28px;color:rgba(255,255,255,0.4)}
 .footer-copy{font-size:12px;color:rgba(255,255,255,0.25)}
 #back-top{position:fixed;bottom:28px;right:28px;width:44px;height:44px;border-radius:50%;background:var(--lime);color:var(--ink);display:flex;align-items:center;justify-content:center;font-size:18px;z-index:888;opacity:0;pointer-events:none;transition:opacity .3s;border:none;cursor:pointer}
 #back-top.visible{opacity:1;pointer-events:all}
+/* COST + WHY + NZ */
+#costs{background:var(--white)}
+.cost-wrap{margin-top:40px;border:1px solid var(--border);border-radius:var(--r-xl);overflow:hidden;background:var(--white)}
+.cost-table{width:100%;border-collapse:collapse;font-size:14px}
+.cost-table th{text-align:left;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);background:var(--cream);padding:14px 20px;border-bottom:1px solid var(--border)}
+.cost-table td{padding:14px 20px;border-bottom:1px solid var(--border);vertical-align:top}
+.cost-table tr:last-child td{border-bottom:none}
+.cost-table td:first-child{font-weight:700}
+.cost-india{color:var(--teal);font-weight:800}
+.cost-save{display:inline-block;font-size:12px;font-weight:700;padding:3px 10px;border-radius:var(--r-full);background:rgba(42,157,143,0.1);color:var(--teal)}
+.cost-note{font-size:12px;color:var(--muted);line-height:1.6;margin-top:14px;max-width:720px}
+#why-india{background:var(--sand)}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
+.why-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r-lg);padding:22px}
+.why-icon{width:42px;height:42px;border-radius:12px;background:rgba(42,157,143,0.1);color:var(--teal);display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:14px}
+.why-title{font-size:15px;font-weight:800;margin-bottom:6px;letter-spacing:-0.2px}
+.why-desc{font-size:13px;color:var(--muted);line-height:1.65}
+#nz-patients{background:var(--white)}
+.nz-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:start;margin-top:40px}
+.nz-steps{display:flex;flex-direction:column;gap:14px}
+.nz-step{display:flex;gap:14px;padding:18px 20px;border:1px solid var(--border);border-radius:var(--r-lg);background:var(--cream)}
+.nz-step-tag{flex-shrink:0;min-width:78px;text-align:center;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:var(--r-full);height:fit-content}
+.nz-step-tag.nz{background:rgba(212,168,83,0.15);color:#8a6a24}
+.nz-step-tag.in{background:rgba(42,157,143,0.12);color:var(--teal)}
+.nz-step-title{font-size:15px;font-weight:800;margin-bottom:4px}
+.nz-step-desc{font-size:13px;color:var(--muted);line-height:1.6}
+.nz-panel{background:var(--ink);color:#fff;border-radius:var(--r-xl);padding:30px}
+.nz-panel-title{font-size:20px;font-weight:800;letter-spacing:-0.4px;margin-bottom:10px}
+.nz-panel p{font-size:14px;color:rgba(255,255,255,0.55);line-height:1.7;margin-bottom:14px}
+.nz-panel ul{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:22px}
+.nz-panel li{display:flex;gap:10px;font-size:14px;color:rgba(255,255,255,0.8);line-height:1.5}
+.nz-panel li i{color:var(--lime);font-size:16px;margin-top:2px;flex-shrink:0}
+@media(max-width:1024px){.why-grid{grid-template-columns:1fr 1fr}.nz-grid{grid-template-columns:1fr}}
+@media(max-width:768px){.cost-wrap{overflow-x:auto}.cost-table{min-width:560px}.cost-table th,.cost-table td{padding:12px 14px}}
+@media(max-width:480px){.why-grid{grid-template-columns:1fr}.nz-panel{padding:22px 18px}.nz-step{flex-direction:column;gap:8px;padding:16px}}
 @media(max-width:1024px){.svc-grid{grid-template-columns:1fr}.treat-grid{grid-template-columns:1fr 1fr}.sources-grid{grid-template-columns:1fr 1fr}.hosp-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:768px){.container{padding:0 20px}#nav{padding:0 20px}.section{padding:64px 0}#hero{padding:120px 0 56px}.treat-grid,.sources-grid,.hosp-grid{grid-template-columns:1fr}.fg2{grid-template-columns:1fr}.nav-links,.nav-cta{display:none}.nav-mobile-toggle{display:flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;padding:0}.hero-proof{gap:16px;row-gap:12px}.hiw-step{gap:14px}.hiw-steps{max-width:100%}.form-box{padding:28px 22px}.fi,.fs,.ft{font-size:16px}.footer-inner{flex-direction:column;gap:28px}.footer-tagline{max-width:none}}
 @media(max-width:480px){.container{padding:0 16px}#nav{padding:0 16px}.section{padding:48px 0}#hero{padding:104px 0 48px}.nav-logo{font-size:15px}.hero-btns{gap:10px}.hero-btns .btn{width:100%;justify-content:center}.proof-item{font-size:12px}.form-box{padding:22px 16px}.svc{padding:20px}.treat-card,.source-card,.hosp-card{padding:16px}.marquee-item{padding:0 16px;font-size:11px}.hosp-grid,.treat-grid,.sources-grid{gap:12px}}
@@ -139,18 +174,18 @@ footer{background:#080808;padding:48px 0 28px;color:rgba(255,255,255,0.4)}
 <nav id="nav">
   <a href="/" class="nav-logo">the strategic <span>traveller</span></a>
   <ul class="nav-links">
+    <li><a href="medical.html" class="active">Medical tourism</a></li>
     <li><a href="wellness.html">Wellness retreats</a></li>
     <li><a href="corporate.html">Corporate wellness</a></li>
-    <li><a href="medical.html" class="active">Medical tourism</a></li>
     <li><a href="/#destinations">Destinations</a></li>
   </ul>
   <a href="#cta" class="nav-cta">Start my journey</a>
   <button class="nav-mobile-toggle" id="mob-toggle" aria-label="Open menu"><i class="ti ti-menu-2"></i></button>
 </nav>
 <div class="mobile-menu" id="mobile-menu">
+  <a href="medical.html" onclick="closeMob()">Medical tourism</a>
   <a href="wellness.html" onclick="closeMob()">Wellness retreats</a>
   <a href="corporate.html" onclick="closeMob()">Corporate wellness</a>
-  <a href="medical.html" onclick="closeMob()">Medical tourism</a>
   <a href="/#destinations" onclick="closeMob()">Destinations</a>
   <a href="#cta" class="mob-cta" onclick="closeMob()">Start my journey</a>
 </div>
@@ -163,19 +198,20 @@ footer{background:#080808;padding:48px 0 28px;color:rgba(255,255,255,0.4)}
     <p class="hero-sub">End-to-end medical tourism coordination for international patients seeking treatment in India. From hospital selection and visa documentation to appointments, accommodation, and recovery. All India logistics are managed by our team in Delhi, with one point of contact throughout your entire journey.</p>
     <div class="hero-btns">
       <a href="#cta" class="btn btn-lime">Start my patient journey <i class="ti ti-arrow-right"></i></a>
-      <a href="#treatments" class="btn btn-outline-white">Treatments we coordinate</a>
+      <a href="#costs" class="btn btn-outline-white">See treatment costs</a>
     </div>
     <div class="hero-proof">
       <div class="proof-item"><i class="ti ti-shield-check"></i> NABH and JCI accredited hospitals only</div>
       <div class="proof-item"><i class="ti ti-certificate"></i> e-Medical Visa support</div>
       <div class="proof-item"><i class="ti ti-users"></i> 167 countries eligible</div>
+      <div class="proof-item"><i class="ti ti-receipt"></i> Written cost estimate in 48 hours</div>
       <div class="proof-item"><i class="ti ti-heart"></i> One coordinator from start to finish</div>
     </div>
   </div>
 </section>
 <div class="marquee-strip" aria-hidden="true"><div class="marquee-inner">
   <span class="marquee-item">Cardiac surgery</span><span class="marquee-item">Orthopaedics</span><span class="marquee-item">Oncology</span><span class="marquee-item">Fertility treatment</span><span class="marquee-item">Dental</span><span class="marquee-item">Robotic surgery</span><span class="marquee-item">Transplant</span><span class="marquee-item">Spine surgery</span><span class="marquee-item">Cosmetic</span><span class="marquee-item">Neuro</span><span class="marquee-item">NABH hospitals</span><span class="marquee-item">e-Medical Visa</span>
-  <span class="marquee-item">Cardiac surgery</span><span class="marquee-item">Orthopaedics</span><span class="marquee-item">Oncology</span><span class="marquee-item">Fertility treatment</span><span class="marquee-item">Dental</span><span class="marquite-item">Robotic surgery</span><span class="marquee-item">Transplant</span><span class="marquee-item">Spine surgery</span><span class="marquee-item">Cosmetic</span><span class="marquee-item">Neuro</span><span class="marquee-item">NABH hospitals</span><span class="marquee-item">e-Medical Visa</span>
+  <span class="marquee-item">Cardiac surgery</span><span class="marquee-item">Orthopaedics</span><span class="marquee-item">Oncology</span><span class="marquee-item">Fertility treatment</span><span class="marquee-item">Dental</span><span class="marquee-item">Robotic surgery</span><span class="marquee-item">Transplant</span><span class="marquee-item">Spine surgery</span><span class="marquee-item">Cosmetic</span><span class="marquee-item">Neuro</span><span class="marquee-item">NABH hospitals</span><span class="marquee-item">e-Medical Visa</span>
 </div></div>
 <section id="services-detail" class="section">
   <div class="container">
@@ -195,7 +231,7 @@ footer{background:#080808;padding:48px 0 28px;color:rgba(255,255,255,0.4)}
   <div class="container">
     <div class="eyebrow ey-teal" style="display:inline-flex"><i class="ti ti-heart-plus"></i> Treatments</div>
     <h2 style="font-size:clamp(26px,3.5vw,42px);font-weight:800;letter-spacing:-1px;line-height:1.1;margin-top:16px;margin-bottom:10px">Treatments we coordinate in India</h2>
-    <p style="font-size:14px;color:var(--muted);line-height:1.7;max-width:480px">We work across all major treatment specialities at NABH and JCI-accredited hospitals.</p>
+    <p style="font-size:14px;color:var(--muted);line-height:1.7;max-width:480px">We work across all major treatment specialities at NABH and JCI-accredited hospitals, from complex surgery to routine procedures and health check-ups.</p>
     <div class="treat-grid">
       <div class="treat-card"><div class="treat-icon">❤️</div><div class="treat-title">Cardiac care</div><div class="treat-desc">Bypass surgery, angioplasty, valve replacement, and complex cardiac procedures. India's leading cardiac centres have outcomes comparable to global benchmarks.</div></div>
       <div class="treat-card"><div class="treat-icon">🦴</div><div class="treat-title">Orthopaedics and spine</div><div class="treat-desc">Hip and knee replacement, spine surgery, joint reconstruction, and sports injuries. Robotic-assisted procedures available at leading centres.</div></div>
@@ -203,6 +239,9 @@ footer{background:#080808;padding:48px 0 28px;color:rgba(255,255,255,0.4)}
       <div class="treat-card"><div class="treat-icon">🌸</div><div class="treat-title">Fertility and reproductive health</div><div class="treat-desc">IVF, fertility diagnostics, surrogacy coordination, and reproductive health treatment at India's leading fertility centres. Full legal and logistical support.</div></div>
       <div class="treat-card"><div class="treat-icon">😁</div><div class="treat-title">Dental treatment</div><div class="treat-desc">Implants, crowns, veneers, full-mouth rehabilitation, and cosmetic dentistry at verified dental clinics. Accommodation and post-procedure care included.</div></div>
       <div class="treat-card"><div class="treat-icon">🧠</div><div class="treat-title">Neurology and neurosurgery</div><div class="treat-desc">Brain and spine neurological conditions, neurosurgery, stroke rehabilitation, and neurological diagnostics at NABH-accredited neuro centres.</div></div>
+      <div class="treat-card"><div class="treat-icon">🫀</div><div class="treat-title">Organ transplant</div><div class="treat-desc">Kidney, liver, and bone marrow transplant at hospitals with dedicated transplant units, following India's legal framework for related donors.</div></div>
+      <div class="treat-card"><div class="treat-icon">👁️</div><div class="treat-title">Eye care</div><div class="treat-desc">Cataract surgery, LASIK, retina and cornea treatment at specialist eye hospitals, often with short stays and quick recovery.</div></div>
+      <div class="treat-card"><div class="treat-icon">🩺</div><div class="treat-title">Health check-ups and bariatric surgery</div><div class="treat-desc">Comprehensive executive health screening in one or two days, and weight-loss surgery with dietitian follow-up and recovery planning.</div></div>
     </div>
   </div>
 </section>
@@ -218,6 +257,69 @@ footer{background:#080808;padding:48px 0 28px;color:rgba(255,255,255,0.4)}
       <div class="source-card"><div class="source-flag">🌍</div><div class="source-title">Africa</div><div class="source-desc">Nigeria, Kenya, Tanzania, Ethiopia, Ghana, Uganda. India is the preferred medical tourism destination for East and West African patients.</div></div>
       <div class="source-card"><div class="source-flag">🌏</div><div class="source-title">South East Asia</div><div class="source-desc">Bangladesh, Myanmar, Maldives, Sri Lanka, Nepal. Close geographic proximity and Indian healthcare reputation drive strong patient inflows.</div></div>
       <div class="source-card"><div class="source-flag">🇳🇿</div><div class="source-title">Australia and New Zealand</div><div class="source-desc">Indian diaspora and cost-conscious patients. We have a particular focus on the New Zealand corridor: our New Zealand-based lead prepares you before you leave and supports your return home, while our Delhi team manages everything in India.</div></div>
+    </div>
+  </div>
+</section>
+<section id="costs" class="section">
+  <div class="container">
+    <div class="eyebrow ey-teal" style="display:inline-flex"><i class="ti ti-receipt"></i> Treatment costs</div>
+    <h2 style="font-size:clamp(26px,3.5vw,42px);font-weight:800;letter-spacing:-1px;line-height:1.1;margin-top:16px;margin-bottom:10px">What treatment costs in India</h2>
+    <p style="font-size:14px;color:var(--muted);line-height:1.7;max-width:540px">Indicative hospital costs for common procedures at accredited Indian hospitals, compared with private treatment in the USA. Savings usually cover flights, accommodation, and a companion several times over.</p>
+    <div class="cost-wrap">
+      <table class="cost-table">
+        <thead><tr><th>Procedure</th><th>India (USD)</th><th>USA (USD)</th><th>Typical saving</th></tr></thead>
+        <tbody>
+          <tr><td>Cardiac bypass (CABG)</td><td class="cost-india">5,000 to 7,000</td><td>70,000 to 150,000</td><td><span class="cost-save">90%+</span></td></tr>
+          <tr><td>Hip replacement</td><td class="cost-india">6,000 to 8,000</td><td>40,000 to 50,000</td><td><span class="cost-save">80 to 85%</span></td></tr>
+          <tr><td>Knee replacement (single)</td><td class="cost-india">5,000 to 7,000</td><td>35,000 to 50,000</td><td><span class="cost-save">80 to 85%</span></td></tr>
+          <tr><td>Spinal fusion</td><td class="cost-india">7,000 to 10,000</td><td>60,000 to 110,000</td><td><span class="cost-save">85 to 90%</span></td></tr>
+          <tr><td>IVF (one cycle)</td><td class="cost-india">2,500 to 4,000</td><td>12,000 to 20,000</td><td><span class="cost-save">75 to 80%</span></td></tr>
+          <tr><td>Dental implant (per tooth)</td><td class="cost-india">500 to 1,000</td><td>3,000 to 5,000</td><td><span class="cost-save">70 to 85%</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="cost-note">Ranges are indicative and vary by hospital, surgeon, implant choice, room category, and your clinical case. Within 48 hours of receiving your reports, our Delhi team sends a written estimate from the recommended hospital before you commit to anything.</p>
+  </div>
+</section>
+<section id="why-india" class="section">
+  <div class="container">
+    <div class="eyebrow ey-teal" style="display:inline-flex"><i class="ti ti-shield-check"></i> Quality and safety</div>
+    <h2 style="font-size:clamp(26px,3.5vw,42px);font-weight:800;letter-spacing:-1px;line-height:1.1;margin-top:16px;margin-bottom:10px">Why patients choose India for treatment</h2>
+    <p style="font-size:14px;color:var(--muted);line-height:1.7;max-width:520px">Lower cost is only part of it. Patients come for speed, specialist experience, and hospitals built to look after international patients.</p>
+    <div class="why-grid">
+      <div class="why-card"><div class="why-icon"><i class="ti ti-certificate"></i></div><div class="why-title">Accredited hospitals</div><div class="why-desc">We refer only to NABH or JCI-accredited hospitals with dedicated international patient departments, audited infection control, and published quality standards.</div></div>
+      <div class="why-card"><div class="why-icon"><i class="ti ti-clock-hour-4"></i></div><div class="why-title">Treatment without long waits</div><div class="why-desc">Consultation, diagnostics, and surgery can usually be scheduled within days or weeks of your reports being reviewed, rather than months on a waiting list.</div></div>
+      <div class="why-card"><div class="why-icon"><i class="ti ti-stethoscope"></i></div><div class="why-title">Experienced specialists</div><div class="why-desc">Many senior surgeons trained or practised in the UK, USA, or Australia. High patient volumes mean deep experience in cardiac, orthopaedic, and transplant procedures.</div></div>
+      <div class="why-card"><div class="why-icon"><i class="ti ti-language"></i></div><div class="why-title">English-speaking care</div><div class="why-desc">Doctors and international patient teams work in English, with interpreters arranged for Arabic, French, Swahili, and other languages when needed.</div></div>
+    </div>
+  </div>
+</section>
+<section id="nz-patients" class="section">
+  <div class="container">
+    <div class="eyebrow ey-teal" style="display:inline-flex"><i class="ti ti-plane-departure"></i> For patients in New Zealand</div>
+    <h2 style="font-size:clamp(26px,3.5vw,42px);font-weight:800;letter-spacing:-1px;line-height:1.1;margin-top:16px;margin-bottom:10px">From New Zealand to India and home again</h2>
+    <p style="font-size:14px;color:var(--muted);line-height:1.7;max-width:560px">Waiting months for elective surgery, or facing high private costs? Our New Zealand-based lead looks after you at home, and our Delhi team looks after you in India. Both work from the same patient file.</p>
+    <div class="nz-grid">
+      <div class="nz-steps">
+        <div class="nz-step"><span class="nz-step-tag nz">In NZ</span><div><div class="nz-step-title">Consultation and reports</div><div class="nz-step-desc">Our New Zealand lead meets you, gathers your scans, specialist letters, and GP notes, and explains the options in your time zone.</div></div></div>
+        <div class="nz-step"><span class="nz-step-tag in">In India</span><div><div class="nz-step-title">Hospital review and estimate</div><div class="nz-step-desc">Our Delhi team shares your reports with the right specialists, arranges a tele-consultation, and gets you a written cost estimate.</div></div></div>
+        <div class="nz-step"><span class="nz-step-tag nz">In NZ</span><div><div class="nz-step-title">Visa, flights, and preparation</div><div class="nz-step-desc">Help with your e-Medical Visa, flight planning, and what to pack, plus a pre-departure briefing for you and your companion.</div></div></div>
+        <div class="nz-step"><span class="nz-step-tag in">In India</span><div><div class="nz-step-title">Treatment and recovery</div><div class="nz-step-desc">Airport pickup, accommodation near the hospital, appointment support, and daily updates to your family back in New Zealand.</div></div></div>
+        <div class="nz-step"><span class="nz-step-tag nz">In NZ</span><div><div class="nz-step-title">Follow-up at home</div><div class="nz-step-desc">Your discharge summary and imaging are handed over for your GP, and our New Zealand lead checks in as you recover.</div></div></div>
+      </div>
+      <div class="nz-panel">
+        <div class="nz-panel-title">Commonly requested by New Zealand patients</div>
+        <p>These are the procedures New Zealanders most often ask us about.</p>
+        <ul>
+          <li><i class="ti ti-check"></i>Hip and knee replacement</li>
+          <li><i class="ti ti-check"></i>Spine surgery</li>
+          <li><i class="ti ti-check"></i>Cardiac procedures and second opinions</li>
+          <li><i class="ti ti-check"></i>IVF and fertility treatment</li>
+          <li><i class="ti ti-check"></i>Dental implants and full-mouth rehabilitation</li>
+          <li><i class="ti ti-check"></i>Cataract and eye surgery</li>
+        </ul>
+        <a href="#cta" class="btn btn-lime">Talk to our New Zealand lead <i class="ti ti-arrow-right"></i></a>
+      </div>
     </div>
   </div>
 </section>
@@ -257,6 +359,10 @@ footer{background:#080808;padding:48px 0 28px;color:rgba(255,255,255,0.4)}
     <details><summary>How do I apply for an e-Medical Visa for India? <i class="ti ti-chevron-down" style="font-size:18px;color:var(--muted)"></i></summary><p>The e-Medical Visa is available to citizens of 167 countries and is applied for online at the Indian Visa Online portal. You need a hospital appointment confirmation letter, passport-size photo, and passport details. Processing typically takes 1 to 4 business days. An e-Medical Attendant Visa is available for one accompanying family member. We manage the full visa documentation process for every patient we coordinate.</p></details>
     <details><summary>Which hospitals in India are best for international patients? <i class="ti ti-chevron-down" style="font-size:18px;color:var(--muted)"></i></summary><p>The best hospitals for international patients are those with NABH or JCI accreditation. Leading options include Manipal Hospitals (multi-city, cardiac, orthopaedic, oncology), Max Healthcare (Delhi NCR, cardiac, oncology), Apollo Hospitals (pan-India, widest international network), and Narayana Health (cardiac, Bengaluru). We recommend based on your specific treatment need and preferred city, not by any preferred arrangement.</p></details>
     <details><summary>Do you charge the patient for coordination services? <i class="ti ti-chevron-down" style="font-size:18px;color:var(--muted)"></i></summary><p>Our coordination fee model is discussed transparently at the start of each engagement. In most cases we earn a referral commission from the hospital and do not charge the patient directly for coordination. For complex cases requiring significant on-ground support, a patient care coordination fee may apply. This is always disclosed upfront before any commitment is made.</p></details>
+    <details><summary>Is it safe to have surgery in India? <i class="ti ti-chevron-down" style="font-size:18px;color:var(--muted)"></i></summary><p>At accredited hospitals, yes. We only refer patients to NABH or JCI-accredited hospitals, which follow audited standards for infection control, patient safety, and clinical governance. Many of India's leading hospitals report outcomes for cardiac and orthopaedic surgery comparable to international benchmarks. We share your reports with specialists before you travel, so you know the treatment plan and the surgeon before you book a flight.</p></details>
+    <details><summary>How long will I need to stay in India? <i class="ti ti-chevron-down" style="font-size:18px;color:var(--muted)"></i></summary><p>It depends on the treatment. Typical stays are 2 to 3 weeks for hip or knee replacement, 3 to 4 weeks for cardiac bypass, 5 to 10 days for dental implants (with a second visit for some cases), and 2 to 3 weeks for an IVF cycle. Your treating doctor confirms the recommended stay, including time before you are fit to fly, as part of your treatment plan.</p></details>
+    <details><summary>Can a family member travel with me? <i class="ti ti-chevron-down" style="font-size:18px;color:var(--muted)"></i></summary><p>Yes. Family members travelling with you can apply for an e-Medical Attendant Visa linked to your e-Medical Visa. We arrange accommodation for your companion near the hospital, and our Delhi team keeps them updated at every step.</p></details>
+    <details><summary>What happens with follow-up care when I get home? <i class="ti ti-chevron-down" style="font-size:18px;color:var(--muted)"></i></summary><p>Before you leave India, you receive your discharge summary, imaging, and a written aftercare plan to share with your doctor at home. Your treating doctor stays available for follow-up tele-consultations. For patients in New Zealand, our New Zealand-based lead checks in after you return and helps coordinate with your GP.</p></details>
     <details><summary>Can you coordinate post-treatment recovery in India before I return home? <i class="ti ti-chevron-down" style="font-size:18px;color:var(--muted)"></i></summary><p>Yes. We plan Ayurvedic recovery retreats, physiotherapy programmes, and wellness stays for patients who wish to spend time in India recovering before flying home. Kerala is a popular recovery destination for post-cardiac and post-orthopaedic patients. We also arrange wellness coordination for patients from New Zealand and Australia through our New Zealand retreat partner network.</p></details>
   </div>
 </section>
@@ -289,7 +395,7 @@ footer{background:#080808;padding:48px 0 28px;color:rgba(255,255,255,0.4)}
             <option>Cardiac surgery</option><option>Orthopaedics or spine</option>
             <option>Oncology</option><option>Fertility or IVF</option>
             <option>Dental treatment</option><option>Neurology or neurosurgery</option>
-            <option>Cosmetic or plastic surgery</option><option>Second opinion</option>
+            <option>Cosmetic or plastic surgery</option><option>Organ transplant</option><option>Eye surgery</option><option>Bariatric surgery</option><option>Executive health check-up</option><option>Second opinion</option>
             <option>Other or not sure</option>
           </select>
         </div>
@@ -318,7 +424,7 @@ footer{background:#080808;padding:48px 0 28px;color:rgba(255,255,255,0.4)}
       </div>
       <div>
         <div class="footer-col-title">Treatments</div>
-        <ul class="footer-links"><li><a href="#treatments">Cardiac care</a></li><li><a href="#treatments">Orthopaedics</a></li><li><a href="#treatments">Oncology</a></li><li><a href="#treatments">Fertility</a></li><li><a href="#treatments">Dental</a></li></ul>
+        <ul class="footer-links"><li><a href="#treatments">Cardiac care</a></li><li><a href="#treatments">Orthopaedics</a></li><li><a href="#treatments">Oncology</a></li><li><a href="#treatments">Fertility</a></li><li><a href="#treatments">Dental</a></li><li><a href="#costs">Treatment costs</a></li><li><a href="#nz-patients">Patients from New Zealand</a></li></ul>
       </div>
       <div>
         <div class="footer-col-title">Contact</div>
